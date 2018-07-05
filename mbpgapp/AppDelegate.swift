@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PromiseKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // This is need to inject ViewModel to first scene
+        if let window = self.window,
+            let nav = window.rootViewController as? UINavigationController,
+            let vc = nav.childViewControllers[0] as? MobileListViewController {
+            let vm = MobileListViewModel(uc: MobileInfoUseCase.shared)
+            vc.setViewModel(vm)
+        }
+        
         return true
     }
 

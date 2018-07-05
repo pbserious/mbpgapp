@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-781" y="62"/>
         </scene>
-        <!--View Controller-->
+        <!--Mobile List View Controller-->
         <scene sceneID="DGk-ax-Vrk">
             <objects>
-                <viewController id="sbE-wz-Esk" sceneMemberID="viewController">
+                <viewController id="sbE-wz-Esk" customClass="MobileListViewController" customModule="mbpgapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hUa-i3-fnE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
