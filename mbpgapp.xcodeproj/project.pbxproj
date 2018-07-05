@@ -121,13 +121,77 @@
 			isa = PBXGroup;
 			children = (
 				2F4CFE1C20EE69080036B3CA /* AppDelegate.swift */,
-				2F4CFE1E20EE69080036B3CA /* ViewController.swift */,
-				2F4CFE2020EE69080036B3CA /* Main.storyboard */,
+				2F6AB4D620EE709100A29FA1 /* Repository */,
+				2F6AB4D520EE6FDB00A29FA1 /* UseCases */,
+				2F6AB4D220EE6F9700A29FA1 /* Models */,
+				2F6AB4D120EE6F8F00A29FA1 /* Views */,
+				2F6AB4D320EE6FA600A29FA1 /* ViewModels */,
+				2F6AB4D420EE6FB500A29FA1 /* ViewControllers */,
 				2F4CFE2320EE69090036B3CA /* Assets.xcassets */,
-				2F4CFE2520EE69090036B3CA /* LaunchScreen.storyboard */,
 				2F4CFE2820EE69090036B3CA /* Info.plist */,
+				2F4CFE2520EE69090036B3CA /* LaunchScreen.storyboard */,
 			);
 			path = mbpgapp;
+			sourceTree = "<group>";
+		};
+		2F6AB4D120EE6F8F00A29FA1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F4CFE2020EE69080036B3CA /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2F6AB4D220EE6F9700A29FA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2F6AB4D320EE6FA600A29FA1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2F6AB4D420EE6FB500A29FA1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F4CFE1E20EE69080036B3CA /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2F6AB4D520EE6FDB00A29FA1 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		2F6AB4D620EE709100A29FA1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2F6AB4D820EE712200A29FA1 /* Local */,
+				2F6AB4D720EE710500A29FA1 /* Remote */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2F6AB4D720EE710500A29FA1 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		2F6AB4D820EE712200A29FA1 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 		2FB0428820EE6A9300EF29E7 /* mbpgappTests */ = {
