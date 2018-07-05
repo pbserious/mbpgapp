@@ -13,6 +13,9 @@
 		2F4CFE2420EE69090036B3CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CFE2320EE69090036B3CA /* Assets.xcassets */; };
 		2F4CFE2720EE69090036B3CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CFE2520EE69090036B3CA /* LaunchScreen.storyboard */; };
 		2FB0428A20EE6A9400EF29E7 /* mbpgappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0428920EE6A9400EF29E7 /* mbpgappTests.swift */; };
+		A5B7B65C6F6FCFA2605A1855 /* Pods_mbpgappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDFF69432CCFFE4083D6F1 /* Pods_mbpgappTests.framework */; };
+		E5FA6EAC328A3BCB5C52C8D1 /* Pods_mbpgappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12A62EAF2588E92B89D073D /* Pods_mbpgappUITests.framework */; };
+		F5951474F1ECAD05460E49A2 /* Pods_mbpgapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEADA1DCEF8F7BBC42C22112 /* Pods_mbpgapp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05CDFF69432CCFFE4083D6F1 /* Pods_mbpgappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mbpgappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20E428CD26793A7B8AB0F31D /* Pods-mbpgapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbpgapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-mbpgapp/Pods-mbpgapp.release.xcconfig"; sourceTree = "<group>"; };
+		2886D0CBE625520DEAACCD15 /* Pods-mbpgapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbpgapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mbpgapp/Pods-mbpgapp.debug.xcconfig"; sourceTree = "<group>"; };
 		2F4CFE1920EE69080036B3CA /* mbpgapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mbpgapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4CFE1C20EE69080036B3CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F4CFE1E20EE69080036B3CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,6 +50,12 @@
 		2FB0428720EE6A9300EF29E7 /* mbpgappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mbpgappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB0428920EE6A9400EF29E7 /* mbpgappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mbpgappTests.swift; sourceTree = "<group>"; };
 		2FB0428B20EE6A9400EF29E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DC3EAA0B307822487CE4BCE /* Pods-mbpgappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbpgappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mbpgappUITests/Pods-mbpgappUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		84D6899615DE76B6A7F251DB /* Pods-mbpgappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbpgappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mbpgappTests/Pods-mbpgappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D12A62EAF2588E92B89D073D /* Pods_mbpgappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mbpgappUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA37B5282A6E0131CC21807D /* Pods-mbpgappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbpgappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mbpgappUITests/Pods-mbpgappUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EEADA1DCEF8F7BBC42C22112 /* Pods_mbpgapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mbpgapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F23A13372EE660A06579CB0A /* Pods-mbpgappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbpgappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mbpgappTests/Pods-mbpgappTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5951474F1ECAD05460E49A2 /* Pods_mbpgapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5FA6EAC328A3BCB5C52C8D1 /* Pods_mbpgappUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,18 +79,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B7B65C6F6FCFA2605A1855 /* Pods_mbpgappTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A70CB84EC6AC30A45A85A75 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEADA1DCEF8F7BBC42C22112 /* Pods_mbpgapp.framework */,
+				05CDFF69432CCFFE4083D6F1 /* Pods_mbpgappTests.framework */,
+				D12A62EAF2588E92B89D073D /* Pods_mbpgappUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2F4CFE1020EE69080036B3CA = {
 			isa = PBXGroup;
 			children = (
 				2F4CFE1B20EE69080036B3CA /* mbpgapp */,
 				2FB0428820EE6A9300EF29E7 /* mbpgappTests */,
 				2F4CFE1A20EE69080036B3CA /* Products */,
+				4997B8C7ED319932D9C589C9 /* Pods */,
+				1A70CB84EC6AC30A45A85A75 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +139,19 @@
 			path = mbpgappTests;
 			sourceTree = "<group>";
 		};
+		4997B8C7ED319932D9C589C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2886D0CBE625520DEAACCD15 /* Pods-mbpgapp.debug.xcconfig */,
+				20E428CD26793A7B8AB0F31D /* Pods-mbpgapp.release.xcconfig */,
+				84D6899615DE76B6A7F251DB /* Pods-mbpgappTests.debug.xcconfig */,
+				F23A13372EE660A06579CB0A /* Pods-mbpgappTests.release.xcconfig */,
+				7DC3EAA0B307822487CE4BCE /* Pods-mbpgappUITests.debug.xcconfig */,
+				EA37B5282A6E0131CC21807D /* Pods-mbpgappUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F4CFE3620EE690A0036B3CA /* Build configuration list for PBXNativeTarget "mbpgapp" */;
 			buildPhases = (
+				50B168A619CC79563F1E8C67 /* [CP] Check Pods Manifest.lock */,
 				2F4CFE1520EE69080036B3CA /* Sources */,
 				2F4CFE1620EE69080036B3CA /* Frameworks */,
 				2F4CFE1720EE69080036B3CA /* Resources */,
+				E565806A9AFA5E2218E58DE7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +178,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F4CFE3920EE690A0036B3CA /* Build configuration list for PBXNativeTarget "mbpgappUITests" */;
 			buildPhases = (
+				8ED23287447C76CDFE7A099E /* [CP] Check Pods Manifest.lock */,
 				2F4CFE2920EE69090036B3CA /* Sources */,
 				2F4CFE2A20EE69090036B3CA /* Frameworks */,
 				2F4CFE2B20EE69090036B3CA /* Resources */,
@@ -154,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FB0428E20EE6A9400EF29E7 /* Build configuration list for PBXNativeTarget "mbpgappTests" */;
 			buildPhases = (
+				5F3370BB2400A93362C284AB /* [CP] Check Pods Manifest.lock */,
 				2FB0428320EE6A9300EF29E7 /* Sources */,
 				2FB0428420EE6A9300EF29E7 /* Frameworks */,
 				2FB0428520EE6A9300EF29E7 /* Resources */,
@@ -237,6 +281,91 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50B168A619CC79563F1E8C67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mbpgapp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F3370BB2400A93362C284AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mbpgappTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ED23287447C76CDFE7A099E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mbpgappUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E565806A9AFA5E2218E58DE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-mbpgapp/Pods-mbpgapp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mbpgapp/Pods-mbpgapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2F4CFE1520EE69080036B3CA /* Sources */ = {
@@ -414,6 +543,7 @@
 		};
 		2F4CFE3720EE690A0036B3CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2886D0CBE625520DEAACCD15 /* Pods-mbpgapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -432,6 +562,7 @@
 		};
 		2F4CFE3820EE690A0036B3CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20E428CD26793A7B8AB0F31D /* Pods-mbpgapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +581,7 @@
 		};
 		2F4CFE3A20EE690A0036B3CA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DC3EAA0B307822487CE4BCE /* Pods-mbpgappUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -470,6 +602,7 @@
 		};
 		2F4CFE3B20EE690A0036B3CA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA37B5282A6E0131CC21807D /* Pods-mbpgappUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -490,6 +623,7 @@
 		};
 		2FB0428F20EE6A9400EF29E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84D6899615DE76B6A7F251DB /* Pods-mbpgappTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -510,6 +644,7 @@
 		};
 		2FB0429020EE6A9400EF29E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F23A13372EE660A06579CB0A /* Pods-mbpgappTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
