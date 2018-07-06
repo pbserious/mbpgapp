@@ -33,14 +33,31 @@
                     <view key="view" contentMode="scaleToFill" id="hUa-i3-fnE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8qh-A4-Ja1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8qh-A4-Ja1" firstAttribute="leading" secondItem="V7b-U0-kbO" secondAttribute="leading" id="8fO-8F-WDU"/>
+                            <constraint firstItem="8qh-A4-Ja1" firstAttribute="bottom" secondItem="V7b-U0-kbO" secondAttribute="bottom" id="NFr-oG-GKt"/>
+                            <constraint firstItem="8qh-A4-Ja1" firstAttribute="trailing" secondItem="V7b-U0-kbO" secondAttribute="trailing" id="P00-4K-0EQ"/>
+                            <constraint firstItem="8qh-A4-Ja1" firstAttribute="top" secondItem="V7b-U0-kbO" secondAttribute="top" id="q88-1J-eRf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="V7b-U0-kbO"/>
                     </view>
-                    <navigationItem key="navigationItem" id="izs-sq-X9J"/>
+                    <navigationItem key="navigationItem" id="izs-sq-X9J">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="s3l-Fd-vTW"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="8qh-A4-Ja1" id="vxG-Nj-Xji"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgi-hN-Ni6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="62"/>
+            <point key="canvasLocation" x="56.799999999999997" y="61.619190404797607"/>
         </scene>
     </scenes>
 </document>
