@@ -10,6 +10,7 @@ import UIKit
 
 class MobileListViewController: UIViewController {
 
+    @IBOutlet fileprivate weak var segmentedControl: CustomSegmentedControl!
     @IBOutlet fileprivate weak var tableView: UITableView!
     
     private var vm: MobileListViewModel!
@@ -22,6 +23,7 @@ class MobileListViewController: UIViewController {
         super.viewDidLoad()
         
         setUpTableView()
+        segmentedControl.addTarget(self, action: #selector(segmentedControlDidChange), for: .valueChanged)
         
         vm.dataChangedHandler = { [weak self] in
             self?.tableView.reloadData()
@@ -34,8 +36,11 @@ class MobileListViewController: UIViewController {
                            forCellReuseIdentifier: MobileListCell.reuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
+    }
+    
+    @objc func segmentedControlDidChange() {
+        print(segmentedControl.selectedIndex)
     }
 }
 
