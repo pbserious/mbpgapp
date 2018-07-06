@@ -39,6 +39,20 @@ class MobileListViewController: UIViewController {
     }
 }
 
+extension MobileListViewController {
+    @IBAction func showSortingSelection() {
+        let alert = UIAlertController(title: "Sort", message: nil, preferredStyle: .alert)
+        let options:[MobileListViewModel.Sorting] = vm.sortingOptions()
+        options.forEach { [weak self] option in
+            alert.addAction(UIAlertAction(title: option.title, style: .default, handler: { _ in
+                self?.vm.selectSorting(option)
+            }))
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+}
+
 extension MobileListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

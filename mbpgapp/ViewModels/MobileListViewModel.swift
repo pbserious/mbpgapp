@@ -10,9 +10,41 @@ import Foundation
 
 class MobileListViewModel {
     
-    fileprivate var usecase: MobileInfoUseCaseProtocol
+    enum Sorting {
+        case none
+        case lowToHigh
+        case highToLow
+        case rating
+        
+        var title: String {
+            switch self {
+            case .lowToHigh:
+                return "Price low to high"
+            case .highToLow:
+                return "Price high to low"
+            case .rating:
+                return "Rating"
+            default:
+                return ""
+            }
+        }
+    }
     
+    fileprivate var usecase: MobileInfoUseCaseProtocol
     fileprivate var mobileList = [MobileData]()
+    fileprivate var adaptedList: [MobileData] {
+        switch currentSorting {
+        case .none:
+            return mobileList
+        case .lowToHigh:
+            return mobileList.sorted(by: { $0.price < $1.price })
+        case .highToLow:
+            return mobileList.sorted(by: { $0.price > $1.price })
+        case .rating:
+            return mobileList.sorted(by: { $0.rating > $1.rating })
+        }
+    }
+    fileprivate var currentSorting:Sorting = .none
     
     var dataChangedHandler: () -> Void = {}
     var errorHandler: () -> Void = {}
@@ -34,12 +66,21 @@ class MobileListViewModel {
         }
     }
     
+    func selectSorting(_ sorting:Sorting) {
+        currentSorting = sorting
+        dataChangedHandler()
+    }
+    
     // MARK: Output Interface
+    func sortingOptions() -> [Sorting] {
+        return [.lowToHigh, .highToLow, .rating]
+    }
+    
     func numberOfMobileData() -> Int {
-        return mobileList.count
+        return adaptedList.count
     }
     
     func mobileData(for indexPath:IndexPath) -> MobileData {
-        return mobileList[indexPath.row]
+        return adaptedList[indexPath.row]
     }
 }
