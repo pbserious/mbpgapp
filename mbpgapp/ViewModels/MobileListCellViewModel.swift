@@ -11,6 +11,7 @@ import Foundation
 protocol MobileListCellViewModelProtocol {
     
     var mobileData: MobileData! { get set }
+    var favHelper: FavouriteHelperProtocol! { get set }
     var name: String { get }
     var description: String { get }
     var price: String { get }
@@ -19,7 +20,9 @@ protocol MobileListCellViewModelProtocol {
     var isFavourite: Bool { get }
     var isToggleFavouriteEnable: Bool { get }
     
-    init(md: MobileData, isToggleFavouriteEnable: Bool)
+    init(md: MobileData,
+         fp: FavouriteHelperProtocol,
+         isToggleFavouriteEnable: Bool)
     
     func toggleFavourite()
     
@@ -28,6 +31,7 @@ protocol MobileListCellViewModelProtocol {
 class MobileListCellViewModel: MobileListCellViewModelProtocol {
     
     var mobileData: MobileData!
+    var favHelper: FavouriteHelperProtocol!
     var name: String {
         return mobileData.name
     }
@@ -45,7 +49,7 @@ class MobileListCellViewModel: MobileListCellViewModelProtocol {
     }
     
     var isFavourite: Bool {
-        return FavouriteHelper.shared.isFavourite(for: mobileData.id)
+        return favHelper.isFavourite(for: mobileData.id)
     }
     
     private var isEnableToggle: Bool
@@ -53,17 +57,20 @@ class MobileListCellViewModel: MobileListCellViewModelProtocol {
         return isEnableToggle
     }
     
-    required init(md: MobileData, isToggleFavouriteEnable: Bool) {
+    required init(md: MobileData,
+                  fp: FavouriteHelperProtocol,
+                  isToggleFavouriteEnable: Bool) {
         self.mobileData = md
+        self.favHelper = fp
         self.isEnableToggle = isToggleFavouriteEnable
     }
     
     func toggleFavourite() {
         // May be return promise instead if use favourite with api
         if isFavourite {
-            FavouriteHelper.shared.unfavouriteMobile(for: mobileData.id)
+            favHelper.unfavouriteMobile(for: mobileData.id)
         } else {
-            FavouriteHelper.shared.favouriteMobile(for: mobileData.id)
+            favHelper.favouriteMobile(for: mobileData.id)
         }
     }
     

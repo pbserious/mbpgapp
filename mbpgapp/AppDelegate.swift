@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let window = self.window,
             let nav = window.rootViewController as? UINavigationController,
             let vc = nav.childViewControllers[0] as? MobileListViewController {
-            let vm = MobileListViewModel(uc: MobileInfoUseCase.shared)
+            let vm = MobileListViewModel(uc: MobileInfoUseCase.shared,
+                                         fp: FavouriteHelper.shared)
             vc.setViewModel(vm)
         }
         

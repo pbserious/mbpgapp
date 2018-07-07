@@ -45,6 +45,7 @@ class MobileListViewModel {
     }
     
     fileprivate var usecase: MobileInfoUseCaseProtocol
+    fileprivate var favHelper: FavouriteHelperProtocol
     fileprivate var mobileList = [MobileData]()
     fileprivate var adaptedList: [MobileData] {
         var result = mobileList
@@ -52,7 +53,7 @@ class MobileListViewModel {
         // Filtering Data
         switch currentFiltering {
         case .favourite:
-            let favIdList = FavouriteHelper.shared.getFavouriteList()
+            let favIdList = favHelper.getFavouriteList()
             result = mobileList.filter({ return favIdList.contains($0.id) })
         default:
             break
@@ -78,8 +79,9 @@ class MobileListViewModel {
     var dataChangedHandler: () -> Void = {}
     var errorHandler: ErrorMessageHandler = { _ in }    
     
-    init(uc: MobileInfoUseCaseProtocol) {
+    init(uc: MobileInfoUseCaseProtocol, fp:FavouriteHelperProtocol ) {
         self.usecase = uc
+        self.favHelper = fp
     }
     
     // MARK: - Input Interface
@@ -116,6 +118,7 @@ class MobileListViewModel {
     
     func mobileListCellViewModel(for indexPath:IndexPath) -> MobileListCellViewModelProtocol {
         return MobileListCellViewModel(md: adaptedList[indexPath.row],
+                                       fp: favHelper,
                                        isToggleFavouriteEnable: currentFiltering.isToggleFavouriteEnable)
     }
 }

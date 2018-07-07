@@ -68,3 +68,21 @@ class MobileInfoUseCase: MobileInfoUseCaseProtocol {
         }
     }
 }
+
+class MockInfoUseCase: MobileInfoUseCaseProtocol {
+    
+    var mobileList = [MobileData]()
+    var imageList = [URL]()
+    
+    func getMobileList() -> Promise<[MobileData]> {
+        return Promise { seal in
+            seal.fulfill(mobileList)
+        }
+    }
+    
+    func getImageUrlList(mobileId: Int) -> Promise<[URL]> {
+        return Promise { seal in
+            seal.fulfill([])
+        }
+    }
+}

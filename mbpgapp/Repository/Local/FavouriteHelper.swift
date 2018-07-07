@@ -10,7 +10,14 @@ import Foundation
 
 fileprivate let FAV_ARRAY_KEY = "FAV_ARRAY_KEY"
 
-class FavouriteHelper {
+protocol FavouriteHelperProtocol {
+    func favouriteMobile(for id:Int)
+    func unfavouriteMobile(for id:Int)
+    func getFavouriteList() -> [Int]
+    func isFavourite(for id:Int) -> Bool
+}
+
+class FavouriteHelper: FavouriteHelperProtocol {
     
     static let shared = FavouriteHelper()
     
@@ -57,5 +64,36 @@ class FavouriteHelper {
     func isFavourite(for id:Int) -> Bool {
         return favouriteArray.contains(id)
     }
+}
+
+class MockFavHelper: FavouriteHelperProtocol {
+    // Thin mock class use for unit test
+    var favList = [Int]()
+    
+    func favouriteMobile(for id: Int) {
+        favList.append(id)
+    }
+    
+    func unfavouriteMobile(for id: Int) {
+        var removedIndex: Int?
+        for index in 0...favList.count-1 {
+            if id == favList[index] {
+                removedIndex = index
+                break
+            }
+        }
+        if let removedIndex = removedIndex {
+            favList.remove(at: removedIndex)
+        }
+    }
+    
+    func getFavouriteList() -> [Int] {
+        return favList
+    }
+    
+    func isFavourite(for id: Int) -> Bool {
+        return favList.contains(id)
+    }
+    
     
 }
