@@ -11,11 +11,6 @@ import Moya
 import PromiseKit
 import ObjectMapper
 
-enum APIError: Error {
-    case unparsableJSON
-    case unknownError
-}
-
 protocol MobileInfoUseCaseProtocol {
     func getMobileList() -> Promise<[MobileData]>
     func getImageUrlList(mobileId: Int) -> Promise<[URL]>
