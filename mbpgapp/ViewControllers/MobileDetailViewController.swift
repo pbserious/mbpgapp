@@ -10,6 +10,7 @@ import UIKit
 
 class MobileDetailViewController: UIViewController {
     
+    @IBOutlet weak var scrollableImagesView: HorizontalScrollableImagesView!
     @IBOutlet weak var descriptionTextView: UITextView!
     
     fileprivate var vm: MobileDetailViewModel!
@@ -33,12 +34,13 @@ class MobileDetailViewController: UIViewController {
     }
     
     func setupImages() {
-        print(vm.getImageUrlList())
+        scrollableImagesView.imageUrlList = vm.getImageUrlList()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
+        setupImages() // first time bring thumb to show
     }
 }

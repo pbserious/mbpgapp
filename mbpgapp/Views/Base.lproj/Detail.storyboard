@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwO-cH-tKe">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RwO-cH-tKe" customClass="HorizontalScrollableImagesView" customModule="mbpgapp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="233.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -46,6 +46,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionTextView" destination="d0F-7Q-JRn" id="M7c-nH-lny"/>
+                        <outlet property="scrollableImagesView" destination="RwO-cH-tKe" id="Ovz-cj-sFu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kpu-Ct-P4d" userLabel="First Responder" sceneMemberID="firstResponder"/>

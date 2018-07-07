@@ -12,6 +12,9 @@
 		2F2E705620F0CF1A00339E65 /* MobileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705520F0CF1A00339E65 /* MobileDetailViewController.swift */; };
 		2F2E705920F0CF4D00339E65 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E705720F0CF4D00339E65 /* Detail.storyboard */; };
 		2F2E705B20F0D07D00339E65 /* MobileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705A20F0D07D00339E65 /* MobileDetailViewModel.swift */; };
+		2F2E705D20F0DFF900339E65 /* HorizontalScrollableImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705C20F0DFF900339E65 /* HorizontalScrollableImagesView.swift */; };
+		2F2E705F20F0E0E300339E65 /* MobileImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705E20F0E0E300339E65 /* MobileImageCollectionCell.swift */; };
+		2F2E706120F0E1B200339E65 /* MobileImageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E706020F0E1B200339E65 /* MobileImageCollectionCell.xib */; };
 		2F4CFE1D20EE69080036B3CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4CFE1C20EE69080036B3CA /* AppDelegate.swift */; };
 		2F4CFE1F20EE69080036B3CA /* MobileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4CFE1E20EE69080036B3CA /* MobileListViewController.swift */; };
 		2F4CFE2220EE69080036B3CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CFE2020EE69080036B3CA /* Main.storyboard */; };
@@ -57,6 +60,9 @@
 		2F2E705520F0CF1A00339E65 /* MobileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewController.swift; sourceTree = "<group>"; };
 		2F2E705820F0CF4D00339E65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Detail.storyboard; sourceTree = "<group>"; };
 		2F2E705A20F0D07D00339E65 /* MobileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewModel.swift; sourceTree = "<group>"; };
+		2F2E705C20F0DFF900339E65 /* HorizontalScrollableImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableImagesView.swift; sourceTree = "<group>"; };
+		2F2E705E20F0E0E300339E65 /* MobileImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileImageCollectionCell.swift; sourceTree = "<group>"; };
+		2F2E706020F0E1B200339E65 /* MobileImageCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileImageCollectionCell.xib; sourceTree = "<group>"; };
 		2F4CFE1920EE69080036B3CA /* mbpgapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mbpgapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4CFE1C20EE69080036B3CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F4CFE1E20EE69080036B3CA /* MobileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +171,8 @@
 			children = (
 				2F5FE61820EFCFF600199ACE /* MobileListCell.swift */,
 				2F5FE61A20EFD6AD00199ACE /* MobileListCell.xib */,
+				2F2E705E20F0E0E300339E65 /* MobileImageCollectionCell.swift */,
+				2F2E706020F0E1B200339E65 /* MobileImageCollectionCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 				2F4CFE2020EE69080036B3CA /* Main.storyboard */,
 				2F2E705720F0CF4D00339E65 /* Detail.storyboard */,
 				2F5FE61C20F000BA00199ACE /* CustomSegmentedControl.swift */,
+				2F2E705C20F0DFF900339E65 /* HorizontalScrollableImagesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -375,6 +384,7 @@
 				2F4CFE2420EE69090036B3CA /* Assets.xcassets in Resources */,
 				2F4CFE2220EE69080036B3CA /* Main.storyboard in Resources */,
 				2F2E705920F0CF4D00339E65 /* Detail.storyboard in Resources */,
+				2F2E706120F0E1B200339E65 /* MobileImageCollectionCell.xib in Resources */,
 				2F5FE61B20EFD6AD00199ACE /* MobileListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,12 +500,14 @@
 				2F6AB4DC20EE74DC00A29FA1 /* MobileData.swift in Sources */,
 				2F5FE61920EFCFF600199ACE /* MobileListCell.swift in Sources */,
 				2F6AB4E220EE876F00A29FA1 /* MobileListViewModel.swift in Sources */,
+				2F2E705F20F0E0E300339E65 /* MobileImageCollectionCell.swift in Sources */,
 				2F2E705620F0CF1A00339E65 /* MobileDetailViewController.swift in Sources */,
 				2F2E705420F08A9200339E65 /* MobileListCellViewModel.swift in Sources */,
 				2F2E705B20F0D07D00339E65 /* MobileDetailViewModel.swift in Sources */,
 				2F5FE61D20F000BA00199ACE /* CustomSegmentedControl.swift in Sources */,
 				2F4CFE1F20EE69080036B3CA /* MobileListViewController.swift in Sources */,
 				2F2E705220F070D300339E65 /* FavouriteHelper.swift in Sources */,
+				2F2E705D20F0DFF900339E65 /* HorizontalScrollableImagesView.swift in Sources */,
 				2F4CFE1D20EE69080036B3CA /* AppDelegate.swift in Sources */,
 				2F6AB4DE20EE782600A29FA1 /* MobileImagesResponse.swift in Sources */,
 			);
