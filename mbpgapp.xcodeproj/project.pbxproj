@@ -28,6 +28,7 @@
 		2F6AB4DE20EE782600A29FA1 /* MobileImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4DD20EE782600A29FA1 /* MobileImagesResponse.swift */; };
 		2F6AB4E020EE78E100A29FA1 /* MobileInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4DF20EE78E100A29FA1 /* MobileInfoUseCase.swift */; };
 		2F6AB4E220EE876F00A29FA1 /* MobileListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4E120EE876F00A29FA1 /* MobileListViewModel.swift */; };
+		2FA2655120F0FF33001EA78B /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2655020F0FF33001EA78B /* URL+Extension.swift */; };
 		2FB0428A20EE6A9400EF29E7 /* mbpgappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0428920EE6A9400EF29E7 /* mbpgappTests.swift */; };
 		A5B7B65C6F6FCFA2605A1855 /* Pods_mbpgappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDFF69432CCFFE4083D6F1 /* Pods_mbpgappTests.framework */; };
 		E5FA6EAC328A3BCB5C52C8D1 /* Pods_mbpgappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12A62EAF2588E92B89D073D /* Pods_mbpgappUITests.framework */; };
@@ -79,6 +80,7 @@
 		2F6AB4DD20EE782600A29FA1 /* MobileImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileImagesResponse.swift; sourceTree = "<group>"; };
 		2F6AB4DF20EE78E100A29FA1 /* MobileInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileInfoUseCase.swift; sourceTree = "<group>"; };
 		2F6AB4E120EE876F00A29FA1 /* MobileListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewModel.swift; sourceTree = "<group>"; };
+		2FA2655020F0FF33001EA78B /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		2FB0428720EE6A9300EF29E7 /* mbpgappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mbpgappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB0428920EE6A9400EF29E7 /* mbpgappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mbpgappTests.swift; sourceTree = "<group>"; };
 		2FB0428B20EE6A9400EF29E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		2F4CFE1B20EE69080036B3CA /* mbpgapp */ = {
 			isa = PBXGroup;
 			children = (
+				2FA2654F20F0FF11001EA78B /* Common */,
 				2F6AB4D620EE709100A29FA1 /* Repository */,
 				2F6AB4D520EE6FDB00A29FA1 /* UseCases */,
 				2F6AB4D220EE6F9700A29FA1 /* Models */,
@@ -248,6 +251,14 @@
 				2F2E705120F070D300339E65 /* FavouriteHelper.swift */,
 			);
 			path = Local;
+			sourceTree = "<group>";
+		};
+		2FA2654F20F0FF11001EA78B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2FA2655020F0FF33001EA78B /* URL+Extension.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		2FB0428820EE6A9300EF29E7 /* mbpgappTests */ = {
@@ -504,6 +515,7 @@
 				2F2E705620F0CF1A00339E65 /* MobileDetailViewController.swift in Sources */,
 				2F2E705420F08A9200339E65 /* MobileListCellViewModel.swift in Sources */,
 				2F2E705B20F0D07D00339E65 /* MobileDetailViewModel.swift in Sources */,
+				2FA2655120F0FF33001EA78B /* URL+Extension.swift in Sources */,
 				2F5FE61D20F000BA00199ACE /* CustomSegmentedControl.swift in Sources */,
 				2F4CFE1F20EE69080036B3CA /* MobileListViewController.swift in Sources */,
 				2F2E705220F070D300339E65 /* FavouriteHelper.swift in Sources */,
