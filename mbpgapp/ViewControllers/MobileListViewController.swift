@@ -43,11 +43,14 @@ class MobileListViewController: UIViewController {
     
     func setViewModel(_ vm:MobileListViewModel) {
         self.vm = vm
+        vm.loadingHandler = { [weak self] in
+            self?.view.showLoadingView()
+        }
         vm.dataChangedHandler = { [weak self] in
+            self?.view.hideLoadingView()
             // Reload section with hard code IndexSet
             self?.tableView.reloadSections([0], with: .automatic)
         }
-        vm.loadData()
     }
     
     override func viewDidLoad() {
@@ -56,6 +59,7 @@ class MobileListViewController: UIViewController {
         self.title = " "
         setupTableView()
         setupSegmentedControl()
+        vm.loadData()
     }
     
     func setupTableView() {

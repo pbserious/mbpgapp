@@ -74,6 +74,7 @@ class MobileListViewModel {
     fileprivate var currentFiltering:Filtering = .none
     fileprivate var currentSorting:Sorting = .none
     
+    var loadingHandler: () -> Void = {}
     var dataChangedHandler: () -> Void = {}
     var errorHandler: () -> Void = {}    
     
@@ -83,6 +84,7 @@ class MobileListViewModel {
     
     // MARK: - Input Interface
     func loadData() {
+        loadingHandler()
         usecase.getMobileList().done { [weak self] list in
             // Handle Data did finish load here
             self?.mobileList = list
