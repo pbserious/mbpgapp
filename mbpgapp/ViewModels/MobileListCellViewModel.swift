@@ -17,8 +17,9 @@ protocol MobileListCellViewModelProtocol {
     var rating: String { get }
     var thumbnailUrl: URL? { get }
     var isFavourite: Bool { get }
+    var isToggleFavouriteEnable: Bool { get }
     
-    init(md: MobileData)
+    init(md: MobileData, isToggleFavouriteEnable: Bool)
     
     func toggleFavourite()
     
@@ -47,11 +48,18 @@ class MobileListCellViewModel: MobileListCellViewModelProtocol {
         return FavouriteHelper.shared.isFavourite(for: mobileData.id)
     }
     
-    required init(md: MobileData) {
+    private var isEnableToggle: Bool
+    var isToggleFavouriteEnable: Bool {
+        return isEnableToggle
+    }
+    
+    required init(md: MobileData, isToggleFavouriteEnable: Bool) {
         self.mobileData = md
+        self.isEnableToggle = isToggleFavouriteEnable
     }
     
     func toggleFavourite() {
+        // May be return promise instead if use favourite with api
         if isFavourite {
             FavouriteHelper.shared.unfavouriteMobile(for: mobileData.id)
         } else {

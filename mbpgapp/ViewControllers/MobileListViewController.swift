@@ -10,6 +10,29 @@ import UIKit
 
 class MobileListViewController: UIViewController {
 
+    enum Segment: Int {
+        case all = 0
+        case favourite = 1
+        
+        var title: String {
+            switch self {
+            case .all:
+                return "All"
+            case .favourite:
+                return "Favourite"
+            }
+        }
+        
+        var filtering: MobileListViewModel.Filtering {
+            switch self {
+            case .all:
+                return .none
+            case .favourite:
+                return .favourite
+            }
+        }
+    }
+    
     @IBOutlet fileprivate weak var segmentedControl: CustomSegmentedControl!
     @IBOutlet fileprivate weak var tableView: UITableView!
     
@@ -40,12 +63,13 @@ class MobileListViewController: UIViewController {
     }
     
     func setupSegmentedControl() {
-        segmentedControl.items = ["All", "Favourite"]
+        segmentedControl.items = [Segment.all.title, Segment.favourite.title]
         segmentedControl.addTarget(self, action: #selector(segmentedControlDidChange), for: .valueChanged)
     }
     
     @objc func segmentedControlDidChange() {
-        print(segmentedControl.selectedIndex)
+        guard let segment = Segment(rawValue: segmentedControl.selectedIndex) else { return }
+        vm.seletFiltering(segment.filtering)
     }
 }
 

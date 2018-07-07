@@ -42,5 +42,6 @@ class MobileListCell: UITableViewCell {
     func updateFavouriteButton() {
         let favStateImage =  vm.isFavourite ? #imageLiteral(resourceName: " ic_fav") : #imageLiteral(resourceName: "ic_unfav")
         favouriteButton.setImage(favStateImage, for: .normal)
+        favouriteButton.isHidden = !vm.isToggleFavouriteEnable
     }
 }
