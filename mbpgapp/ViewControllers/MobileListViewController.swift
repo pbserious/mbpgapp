@@ -52,7 +52,8 @@ class MobileListViewController: UIViewController {
         setupSegmentedControl()
         
         vm.dataChangedHandler = { [weak self] in
-            self?.tableView.reloadData()
+            // Reload section with hard code IndexSet
+            self?.tableView.reloadSections([0], with: .automatic)
         }
         vm.loadData()
     }
