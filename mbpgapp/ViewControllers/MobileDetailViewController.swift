@@ -24,10 +24,13 @@ class MobileDetailViewController: UIViewController {
     
     func setViewModel(_ vm:MobileDetailViewModel) {
         self.vm = vm
+        vm.loadingHandler = { [weak self] in
+            self?.scrollableImagesView.showLoadingView()
+        }
         vm.dataChangedHandler = { [weak self] in
+            self?.scrollableImagesView.hideLoadingView()
             self?.setupImages()
         }
-        vm.fetchImageList()
     }
     
     func setupView() {
@@ -45,6 +48,6 @@ class MobileDetailViewController: UIViewController {
         super.viewDidLoad()
         
         setupView()
-        setupImages() // first time bring thumb to show
+        vm.fetchImageList()
     }
 }

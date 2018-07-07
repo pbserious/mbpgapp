@@ -19,11 +19,13 @@ class MobileDetailViewModel {
         self.mobileData = md
     }
     
+    var loadingHandler: () -> Void = {}
     var dataChangedHandler: () -> Void = {}
     var errorHandler: () -> Void = {}
     
     // MARK: - Input Interface
     func fetchImageList() {
+        loadingHandler()
         usecase.getImageUrlList(mobileId: mobileData.id).done { [weak self] urlList in
             self?.imageUrlList = urlList
             self?.dataChangedHandler()
@@ -52,8 +54,6 @@ class MobileDetailViewModel {
     func getImageUrlList() -> [URL] {
         if imageUrlList.count > 0 {
             return imageUrlList
-        } else if let thumbUrl = mobileData.thumbnailUrl {
-            return [thumbUrl]
         } else {
             return []
         }
