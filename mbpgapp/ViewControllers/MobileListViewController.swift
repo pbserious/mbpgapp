@@ -37,6 +37,9 @@ class MobileListViewController: UIViewController {
     @IBOutlet fileprivate weak var tableView: UITableView!
     
     private var vm: MobileListViewModel!
+    var currentSegment: Segment? {
+        return Segment(rawValue: segmentedControl.selectedIndex)
+    }
     
     func setViewModel(_ vm:MobileListViewModel) {
         self.vm = vm
@@ -68,7 +71,7 @@ class MobileListViewController: UIViewController {
     }
     
     @objc func segmentedControlDidChange() {
-        guard let segment = Segment(rawValue: segmentedControl.selectedIndex) else { return }
+        guard let segment = currentSegment else { return }
         vm.seletFiltering(segment.filtering)
     }
 }
@@ -103,5 +106,20 @@ extension MobileListViewController: UITableViewDelegate, UITableViewDataSource {
             let data = vm.mobileData(for: indexPath)
             cell.setData(data)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        guard let segment = currentSegment, segment == .favourite else {
+            return []
+        }
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Remove") { (action, indexPath) in
+            if let cell = tableView.cellForRow(at: indexPath) as? MobileListCell {
+                cell.favouritePressed()
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        }
+        
+        return [delete]
     }
 }
