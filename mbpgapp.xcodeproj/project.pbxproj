@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2F2E705220F070D300339E65 /* FavouriteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705120F070D300339E65 /* FavouriteHelper.swift */; };
+		2F2E705420F08A9200339E65 /* MobileListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705320F08A9200339E65 /* MobileListCellViewModel.swift */; };
 		2F4CFE1D20EE69080036B3CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4CFE1C20EE69080036B3CA /* AppDelegate.swift */; };
 		2F4CFE1F20EE69080036B3CA /* MobileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4CFE1E20EE69080036B3CA /* MobileListViewController.swift */; };
 		2F4CFE2220EE69080036B3CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CFE2020EE69080036B3CA /* Main.storyboard */; };
 		2F4CFE2420EE69090036B3CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CFE2320EE69090036B3CA /* Assets.xcassets */; };
 		2F4CFE2720EE69090036B3CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CFE2520EE69090036B3CA /* LaunchScreen.storyboard */; };
+		2F5FE61920EFCFF600199ACE /* MobileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5FE61820EFCFF600199ACE /* MobileListCell.swift */; };
+		2F5FE61B20EFD6AD00199ACE /* MobileListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F5FE61A20EFD6AD00199ACE /* MobileListCell.xib */; };
+		2F5FE61D20F000BA00199ACE /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5FE61C20F000BA00199ACE /* CustomSegmentedControl.swift */; };
 		2F6AB4DA20EE724E00A29FA1 /* MobilesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4D920EE724E00A29FA1 /* MobilesAPI.swift */; };
 		2F6AB4DC20EE74DC00A29FA1 /* MobileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4DB20EE74DC00A29FA1 /* MobileData.swift */; };
 		2F6AB4DE20EE782600A29FA1 /* MobileImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4DD20EE782600A29FA1 /* MobileImagesResponse.swift */; };
@@ -46,6 +50,7 @@
 		20E428CD26793A7B8AB0F31D /* Pods-mbpgapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbpgapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-mbpgapp/Pods-mbpgapp.release.xcconfig"; sourceTree = "<group>"; };
 		2886D0CBE625520DEAACCD15 /* Pods-mbpgapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbpgapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mbpgapp/Pods-mbpgapp.debug.xcconfig"; sourceTree = "<group>"; };
 		2F2E705120F070D300339E65 /* FavouriteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteHelper.swift; sourceTree = "<group>"; };
+		2F2E705320F08A9200339E65 /* MobileListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListCellViewModel.swift; sourceTree = "<group>"; };
 		2F4CFE1920EE69080036B3CA /* mbpgapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mbpgapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4CFE1C20EE69080036B3CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F4CFE1E20EE69080036B3CA /* MobileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +59,9 @@
 		2F4CFE2620EE69090036B3CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F4CFE2820EE69090036B3CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F4CFE2D20EE69090036B3CA /* mbpgappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mbpgappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F5FE61820EFCFF600199ACE /* MobileListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListCell.swift; sourceTree = "<group>"; };
+		2F5FE61A20EFD6AD00199ACE /* MobileListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileListCell.xib; sourceTree = "<group>"; };
+		2F5FE61C20F000BA00199ACE /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		2F6AB4D920EE724E00A29FA1 /* MobilesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilesAPI.swift; sourceTree = "<group>"; };
 		2F6AB4DB20EE74DC00A29FA1 /* MobileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileData.swift; sourceTree = "<group>"; };
 		2F6AB4DD20EE782600A29FA1 /* MobileImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileImagesResponse.swift; sourceTree = "<group>"; };
@@ -146,10 +154,21 @@
 			path = mbpgapp;
 			sourceTree = "<group>";
 		};
+		2F5FE61720EFCFC700199ACE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2F5FE61820EFCFF600199ACE /* MobileListCell.swift */,
+				2F5FE61A20EFD6AD00199ACE /* MobileListCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2F6AB4D120EE6F8F00A29FA1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2F5FE61720EFCFC700199ACE /* Cell */,
 				2F4CFE2020EE69080036B3CA /* Main.storyboard */,
+				2F5FE61C20F000BA00199ACE /* CustomSegmentedControl.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				2F6AB4E120EE876F00A29FA1 /* MobileListViewModel.swift */,
+				2F2E705320F08A9200339E65 /* MobileListCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -345,6 +365,7 @@
 				2F4CFE2720EE69090036B3CA /* LaunchScreen.storyboard in Resources */,
 				2F4CFE2420EE69090036B3CA /* Assets.xcassets in Resources */,
 				2F4CFE2220EE69080036B3CA /* Main.storyboard in Resources */,
+				2F5FE61B20EFD6AD00199ACE /* MobileListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +478,10 @@
 				2F6AB4DA20EE724E00A29FA1 /* MobilesAPI.swift in Sources */,
 				2F6AB4E020EE78E100A29FA1 /* MobileInfoUseCase.swift in Sources */,
 				2F6AB4DC20EE74DC00A29FA1 /* MobileData.swift in Sources */,
+				2F5FE61920EFCFF600199ACE /* MobileListCell.swift in Sources */,
 				2F6AB4E220EE876F00A29FA1 /* MobileListViewModel.swift in Sources */,
+				2F2E705420F08A9200339E65 /* MobileListCellViewModel.swift in Sources */,
+				2F5FE61D20F000BA00199ACE /* CustomSegmentedControl.swift in Sources */,
 				2F4CFE1F20EE69080036B3CA /* MobileListViewController.swift in Sources */,
 				2F2E705220F070D300339E65 /* FavouriteHelper.swift in Sources */,
 				2F4CFE1D20EE69080036B3CA /* AppDelegate.swift in Sources */,
