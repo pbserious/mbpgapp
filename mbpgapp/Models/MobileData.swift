@@ -23,6 +23,14 @@ struct MobileData: Mappable {
         return URL(string: self.thumnailUrlString)
     }
     
+    var ratingFriendlyText: String {
+        return "Rating: \(rating)"
+    }
+    
+    var priceFriendlyText: String {
+        return String(format: "Price: $%.2f", price)
+    }
+    
     init?(map: Map) {
         
     }

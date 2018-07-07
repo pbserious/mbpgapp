@@ -59,7 +59,7 @@ class MobileInfoUseCase: MobileInfoUseCaseProtocol {
                         let res = try response.filterSuccessfulStatusCodes()
                         if let array = try res.mapJSON() as? [[String: Any]] {
                             let list = Mapper<MobileImageResponse>().mapArray(JSONArray: array)
-                            seal.fulfill(list.compactMap({ return URL(string: $0.imageUrlString)}))
+                            seal.fulfill(list.compactMap({ return URL(string: $0.imageUrlString)?.httpsURL }))
                         } else {
                             seal.reject(APIError.unparsableJSON)
                         }

@@ -28,7 +28,7 @@ class MobileListCell: UITableViewCell {
         updateFavouriteButton()
     }
     
-    func setData(_ mp: MobileListCellViewModelProtocol) {
+    func setViewModel(_ mp: MobileListCellViewModelProtocol) {
         self.vm = mp
         
         nameLabel.text = vm.name

@@ -74,16 +74,17 @@ class MobileListViewModel {
     fileprivate var currentFiltering:Filtering = .none
     fileprivate var currentSorting:Sorting = .none
     
+    var loadingHandler: () -> Void = {}
     var dataChangedHandler: () -> Void = {}
-    var errorHandler: () -> Void = {}
-    
+    var errorHandler: () -> Void = {}    
     
     init(uc: MobileInfoUseCaseProtocol) {
         self.usecase = uc
     }
     
-    // MARK: Input Interface
+    // MARK: - Input Interface
     func loadData() {
+        loadingHandler()
         usecase.getMobileList().done { [weak self] list in
             // Handle Data did finish load here
             self?.mobileList = list
@@ -94,7 +95,7 @@ class MobileListViewModel {
         }
     }
     
-    func seletFiltering(_ filtering:Filtering) {
+    func selectFiltering(_ filtering:Filtering) {
         currentFiltering = filtering
         dataChangedHandler()
     }
@@ -104,7 +105,7 @@ class MobileListViewModel {
         dataChangedHandler()
     }
     
-    // MARK: Output Interface
+    // MARK: - Output Interface
     func sortingOptions() -> [Sorting] {
         return [.lowToHigh, .highToLow, .rating]
     }
@@ -113,7 +114,7 @@ class MobileListViewModel {
         return adaptedList.count
     }
     
-    func mobileData(for indexPath:IndexPath) -> MobileListCellViewModelProtocol {
+    func mobileListCellViewModel(for indexPath:IndexPath) -> MobileListCellViewModelProtocol {
         return MobileListCellViewModel(md: adaptedList[indexPath.row],
                                        isToggleFavouriteEnable: currentFiltering.isToggleFavouriteEnable)
     }

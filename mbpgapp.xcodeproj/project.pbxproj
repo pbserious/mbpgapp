@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2F2E705220F070D300339E65 /* FavouriteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705120F070D300339E65 /* FavouriteHelper.swift */; };
 		2F2E705420F08A9200339E65 /* MobileListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705320F08A9200339E65 /* MobileListCellViewModel.swift */; };
+		2F2E705620F0CF1A00339E65 /* MobileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705520F0CF1A00339E65 /* MobileDetailViewController.swift */; };
+		2F2E705920F0CF4D00339E65 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E705720F0CF4D00339E65 /* Detail.storyboard */; };
+		2F2E705B20F0D07D00339E65 /* MobileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705A20F0D07D00339E65 /* MobileDetailViewModel.swift */; };
+		2F2E705D20F0DFF900339E65 /* HorizontalScrollableImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705C20F0DFF900339E65 /* HorizontalScrollableImagesView.swift */; };
+		2F2E705F20F0E0E300339E65 /* MobileImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705E20F0E0E300339E65 /* MobileImageCollectionCell.swift */; };
+		2F2E706120F0E1B200339E65 /* MobileImageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E706020F0E1B200339E65 /* MobileImageCollectionCell.xib */; };
 		2F4CFE1D20EE69080036B3CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4CFE1C20EE69080036B3CA /* AppDelegate.swift */; };
 		2F4CFE1F20EE69080036B3CA /* MobileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4CFE1E20EE69080036B3CA /* MobileListViewController.swift */; };
 		2F4CFE2220EE69080036B3CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CFE2020EE69080036B3CA /* Main.storyboard */; };
@@ -22,6 +28,9 @@
 		2F6AB4DE20EE782600A29FA1 /* MobileImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4DD20EE782600A29FA1 /* MobileImagesResponse.swift */; };
 		2F6AB4E020EE78E100A29FA1 /* MobileInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4DF20EE78E100A29FA1 /* MobileInfoUseCase.swift */; };
 		2F6AB4E220EE876F00A29FA1 /* MobileListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4E120EE876F00A29FA1 /* MobileListViewModel.swift */; };
+		2FA2655120F0FF33001EA78B /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2655020F0FF33001EA78B /* URL+Extension.swift */; };
+		2FA2655320F11166001EA78B /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA2655220F11166001EA78B /* LoadingView.xib */; };
+		2FA2655520F111AF001EA78B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2655420F111AF001EA78B /* UIView+Extension.swift */; };
 		2FB0428A20EE6A9400EF29E7 /* mbpgappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0428920EE6A9400EF29E7 /* mbpgappTests.swift */; };
 		A5B7B65C6F6FCFA2605A1855 /* Pods_mbpgappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDFF69432CCFFE4083D6F1 /* Pods_mbpgappTests.framework */; };
 		E5FA6EAC328A3BCB5C52C8D1 /* Pods_mbpgappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12A62EAF2588E92B89D073D /* Pods_mbpgappUITests.framework */; };
@@ -51,6 +60,12 @@
 		2886D0CBE625520DEAACCD15 /* Pods-mbpgapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbpgapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mbpgapp/Pods-mbpgapp.debug.xcconfig"; sourceTree = "<group>"; };
 		2F2E705120F070D300339E65 /* FavouriteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteHelper.swift; sourceTree = "<group>"; };
 		2F2E705320F08A9200339E65 /* MobileListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListCellViewModel.swift; sourceTree = "<group>"; };
+		2F2E705520F0CF1A00339E65 /* MobileDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewController.swift; sourceTree = "<group>"; };
+		2F2E705820F0CF4D00339E65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Detail.storyboard; sourceTree = "<group>"; };
+		2F2E705A20F0D07D00339E65 /* MobileDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDetailViewModel.swift; sourceTree = "<group>"; };
+		2F2E705C20F0DFF900339E65 /* HorizontalScrollableImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollableImagesView.swift; sourceTree = "<group>"; };
+		2F2E705E20F0E0E300339E65 /* MobileImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileImageCollectionCell.swift; sourceTree = "<group>"; };
+		2F2E706020F0E1B200339E65 /* MobileImageCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MobileImageCollectionCell.xib; sourceTree = "<group>"; };
 		2F4CFE1920EE69080036B3CA /* mbpgapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mbpgapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4CFE1C20EE69080036B3CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F4CFE1E20EE69080036B3CA /* MobileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +82,9 @@
 		2F6AB4DD20EE782600A29FA1 /* MobileImagesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileImagesResponse.swift; sourceTree = "<group>"; };
 		2F6AB4DF20EE78E100A29FA1 /* MobileInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileInfoUseCase.swift; sourceTree = "<group>"; };
 		2F6AB4E120EE876F00A29FA1 /* MobileListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewModel.swift; sourceTree = "<group>"; };
+		2FA2655020F0FF33001EA78B /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		2FA2655220F11166001EA78B /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		2FA2655420F111AF001EA78B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2FB0428720EE6A9300EF29E7 /* mbpgappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mbpgappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB0428920EE6A9400EF29E7 /* mbpgappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mbpgappTests.swift; sourceTree = "<group>"; };
 		2FB0428B20EE6A9400EF29E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,6 +158,7 @@
 		2F4CFE1B20EE69080036B3CA /* mbpgapp */ = {
 			isa = PBXGroup;
 			children = (
+				2FA2654F20F0FF11001EA78B /* Common */,
 				2F6AB4D620EE709100A29FA1 /* Repository */,
 				2F6AB4D520EE6FDB00A29FA1 /* UseCases */,
 				2F6AB4D220EE6F9700A29FA1 /* Models */,
@@ -159,6 +178,8 @@
 			children = (
 				2F5FE61820EFCFF600199ACE /* MobileListCell.swift */,
 				2F5FE61A20EFD6AD00199ACE /* MobileListCell.xib */,
+				2F2E705E20F0E0E300339E65 /* MobileImageCollectionCell.swift */,
+				2F2E706020F0E1B200339E65 /* MobileImageCollectionCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -168,7 +189,10 @@
 			children = (
 				2F5FE61720EFCFC700199ACE /* Cell */,
 				2F4CFE2020EE69080036B3CA /* Main.storyboard */,
+				2F2E705720F0CF4D00339E65 /* Detail.storyboard */,
 				2F5FE61C20F000BA00199ACE /* CustomSegmentedControl.swift */,
+				2F2E705C20F0DFF900339E65 /* HorizontalScrollableImagesView.swift */,
+				2FA2655220F11166001EA78B /* LoadingView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +211,7 @@
 			children = (
 				2F6AB4E120EE876F00A29FA1 /* MobileListViewModel.swift */,
 				2F2E705320F08A9200339E65 /* MobileListCellViewModel.swift */,
+				2F2E705A20F0D07D00339E65 /* MobileDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -195,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				2F4CFE1E20EE69080036B3CA /* MobileListViewController.swift */,
+				2F2E705520F0CF1A00339E65 /* MobileDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -230,6 +256,15 @@
 				2F2E705120F070D300339E65 /* FavouriteHelper.swift */,
 			);
 			path = Local;
+			sourceTree = "<group>";
+		};
+		2FA2654F20F0FF11001EA78B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2FA2655020F0FF33001EA78B /* URL+Extension.swift */,
+				2FA2655420F111AF001EA78B /* UIView+Extension.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		2FB0428820EE6A9300EF29E7 /* mbpgappTests */ = {
@@ -365,6 +400,9 @@
 				2F4CFE2720EE69090036B3CA /* LaunchScreen.storyboard in Resources */,
 				2F4CFE2420EE69090036B3CA /* Assets.xcassets in Resources */,
 				2F4CFE2220EE69080036B3CA /* Main.storyboard in Resources */,
+				2F2E705920F0CF4D00339E65 /* Detail.storyboard in Resources */,
+				2FA2655320F11166001EA78B /* LoadingView.xib in Resources */,
+				2F2E706120F0E1B200339E65 /* MobileImageCollectionCell.xib in Resources */,
 				2F5FE61B20EFD6AD00199ACE /* MobileListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,10 +518,16 @@
 				2F6AB4DC20EE74DC00A29FA1 /* MobileData.swift in Sources */,
 				2F5FE61920EFCFF600199ACE /* MobileListCell.swift in Sources */,
 				2F6AB4E220EE876F00A29FA1 /* MobileListViewModel.swift in Sources */,
+				2F2E705F20F0E0E300339E65 /* MobileImageCollectionCell.swift in Sources */,
+				2F2E705620F0CF1A00339E65 /* MobileDetailViewController.swift in Sources */,
+				2FA2655520F111AF001EA78B /* UIView+Extension.swift in Sources */,
 				2F2E705420F08A9200339E65 /* MobileListCellViewModel.swift in Sources */,
+				2F2E705B20F0D07D00339E65 /* MobileDetailViewModel.swift in Sources */,
+				2FA2655120F0FF33001EA78B /* URL+Extension.swift in Sources */,
 				2F5FE61D20F000BA00199ACE /* CustomSegmentedControl.swift in Sources */,
 				2F4CFE1F20EE69080036B3CA /* MobileListViewController.swift in Sources */,
 				2F2E705220F070D300339E65 /* FavouriteHelper.swift in Sources */,
+				2F2E705D20F0DFF900339E65 /* HorizontalScrollableImagesView.swift in Sources */,
 				2F4CFE1D20EE69080036B3CA /* AppDelegate.swift in Sources */,
 				2F6AB4DE20EE782600A29FA1 /* MobileImagesResponse.swift in Sources */,
 			);
@@ -520,6 +564,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2F2E705720F0CF4D00339E65 /* Detail.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2F2E705820F0CF4D00339E65 /* Base */,
+			);
+			name = Detail.storyboard;
+			sourceTree = "<group>";
+		};
 		2F4CFE2020EE69080036B3CA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
