@@ -33,6 +33,16 @@
 		2FA2655520F111AF001EA78B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2655420F111AF001EA78B /* UIView+Extension.swift */; };
 		2FA2655720F13017001EA78B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2655620F13017001EA78B /* APIError.swift */; };
 		2FA2655920F13120001EA78B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2655820F13120001EA78B /* UIViewController+Extension.swift */; };
+		2FA2655A20F14B69001EA78B /* FavouriteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705120F070D300339E65 /* FavouriteHelper.swift */; };
+		2FA2655B20F14BA5001EA78B /* MobileInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4DF20EE78E100A29FA1 /* MobileInfoUseCase.swift */; };
+		2FA2655C20F14C35001EA78B /* MobileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4DB20EE74DC00A29FA1 /* MobileData.swift */; };
+		2FA2655D20F14FE0001EA78B /* MobileListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4E120EE876F00A29FA1 /* MobileListViewModel.swift */; };
+		2FA2655E20F14FE3001EA78B /* MobileListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705320F08A9200339E65 /* MobileListCellViewModel.swift */; };
+		2FA2655F20F14FE6001EA78B /* MobileDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705A20F0D07D00339E65 /* MobileDetailViewModel.swift */; };
+		2FA2656020F15063001EA78B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2655620F13017001EA78B /* APIError.swift */; };
+		2FA2656120F150D2001EA78B /* MobilesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4D920EE724E00A29FA1 /* MobilesAPI.swift */; };
+		2FA2656220F150E7001EA78B /* MobileImagesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6AB4DD20EE782600A29FA1 /* MobileImagesResponse.swift */; };
+		2FA2656320F15108001EA78B /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2655020F0FF33001EA78B /* URL+Extension.swift */; };
 		2FB0428A20EE6A9400EF29E7 /* mbpgappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0428920EE6A9400EF29E7 /* mbpgappTests.swift */; };
 		A5B7B65C6F6FCFA2605A1855 /* Pods_mbpgappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDFF69432CCFFE4083D6F1 /* Pods_mbpgappTests.framework */; };
 		E5FA6EAC328A3BCB5C52C8D1 /* Pods_mbpgappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12A62EAF2588E92B89D073D /* Pods_mbpgappUITests.framework */; };
@@ -552,7 +562,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FA2655F20F14FE6001EA78B /* MobileDetailViewModel.swift in Sources */,
+				2FA2655E20F14FE3001EA78B /* MobileListCellViewModel.swift in Sources */,
 				2FB0428A20EE6A9400EF29E7 /* mbpgappTests.swift in Sources */,
+				2FA2656320F15108001EA78B /* URL+Extension.swift in Sources */,
+				2FA2656120F150D2001EA78B /* MobilesAPI.swift in Sources */,
+				2FA2656220F150E7001EA78B /* MobileImagesResponse.swift in Sources */,
+				2FA2655C20F14C35001EA78B /* MobileData.swift in Sources */,
+				2FA2655B20F14BA5001EA78B /* MobileInfoUseCase.swift in Sources */,
+				2FA2656020F15063001EA78B /* APIError.swift in Sources */,
+				2FA2655A20F14B69001EA78B /* FavouriteHelper.swift in Sources */,
+				2FA2655D20F14FE0001EA78B /* MobileListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
