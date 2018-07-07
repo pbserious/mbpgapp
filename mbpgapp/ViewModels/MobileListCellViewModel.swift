@@ -35,10 +35,10 @@ class MobileListCellViewModel: MobileListCellViewModelProtocol {
         return mobileData.description
     }
     var price: String {
-        return "Price: $\(mobileData.price)"
+        return mobileData.priceFriendlyText
     }
     var rating: String {
-        return "Rating: \(mobileData.rating)"
+        return mobileData.ratingFriendlyText
     }
     var thumbnailUrl: URL? {
         return mobileData.thumbnailUrl

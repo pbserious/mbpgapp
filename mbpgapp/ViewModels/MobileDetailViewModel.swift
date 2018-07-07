@@ -41,6 +41,14 @@ class MobileDetailViewModel {
         return self.mobileData.description
     }
     
+    func getPrice() -> String {
+        return self.mobileData.priceFriendlyText
+    }
+    
+    func getRating() -> String {
+        return self.mobileData.ratingFriendlyText
+    }
+    
     func getImageUrlList() -> [URL] {
         if imageUrlList.count > 0 {
             return imageUrlList

@@ -12,6 +12,8 @@ class MobileDetailViewController: UIViewController {
     
     @IBOutlet weak var scrollableImagesView: HorizontalScrollableImagesView!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
     
     fileprivate var vm: MobileDetailViewModel!
     
@@ -31,6 +33,8 @@ class MobileDetailViewController: UIViewController {
     func setupView() {
         self.title = vm.getViewTitle()
         self.descriptionTextView.text = vm.getViewDescription()
+        self.priceLabel.text = vm.getPrice()
+        self.ratingLabel.text = vm.getRating()
     }
     
     func setupImages() {
