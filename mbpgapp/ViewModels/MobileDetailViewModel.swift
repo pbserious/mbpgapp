@@ -21,7 +21,7 @@ class MobileDetailViewModel {
     
     var loadingHandler: () -> Void = {}
     var dataChangedHandler: () -> Void = {}
-    var errorHandler: () -> Void = {}
+    var errorHandler: ErrorMessageHandler = { _ in }
     
     // MARK: - Input Interface
     func fetchImageList() {
@@ -30,7 +30,7 @@ class MobileDetailViewModel {
             self?.imageUrlList = urlList
             self?.dataChangedHandler()
         }.catch { [weak self] error in
-             self?.errorHandler()
+             self?.errorHandler(error.localizedDescription)
         }
     }
     

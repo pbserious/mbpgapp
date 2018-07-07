@@ -31,6 +31,9 @@ class MobileDetailViewController: UIViewController {
             self?.scrollableImagesView.hideLoadingView()
             self?.setupImages()
         }
+        vm.errorHandler = { [weak self] msg in
+            self?.showAlert(title: "Error", message: msg)
+        }
     }
     
     func setupView() {

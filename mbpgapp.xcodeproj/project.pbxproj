@@ -32,6 +32,7 @@
 		2FA2655320F11166001EA78B /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FA2655220F11166001EA78B /* LoadingView.xib */; };
 		2FA2655520F111AF001EA78B /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2655420F111AF001EA78B /* UIView+Extension.swift */; };
 		2FA2655720F13017001EA78B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2655620F13017001EA78B /* APIError.swift */; };
+		2FA2655920F13120001EA78B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FA2655820F13120001EA78B /* UIViewController+Extension.swift */; };
 		2FB0428A20EE6A9400EF29E7 /* mbpgappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0428920EE6A9400EF29E7 /* mbpgappTests.swift */; };
 		A5B7B65C6F6FCFA2605A1855 /* Pods_mbpgappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05CDFF69432CCFFE4083D6F1 /* Pods_mbpgappTests.framework */; };
 		E5FA6EAC328A3BCB5C52C8D1 /* Pods_mbpgappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D12A62EAF2588E92B89D073D /* Pods_mbpgappUITests.framework */; };
@@ -87,6 +88,7 @@
 		2FA2655220F11166001EA78B /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		2FA2655420F111AF001EA78B /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2FA2655620F13017001EA78B /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		2FA2655820F13120001EA78B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		2FB0428720EE6A9300EF29E7 /* mbpgappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mbpgappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB0428920EE6A9400EF29E7 /* mbpgappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mbpgappTests.swift; sourceTree = "<group>"; };
 		2FB0428B20EE6A9400EF29E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 			children = (
 				2FA2655020F0FF33001EA78B /* URL+Extension.swift */,
 				2FA2655420F111AF001EA78B /* UIView+Extension.swift */,
+				2FA2655820F13120001EA78B /* UIViewController+Extension.swift */,
 				2FA2655620F13017001EA78B /* APIError.swift */,
 			);
 			path = Common;
@@ -524,6 +527,7 @@
 				2F2E705F20F0E0E300339E65 /* MobileImageCollectionCell.swift in Sources */,
 				2F2E705620F0CF1A00339E65 /* MobileDetailViewController.swift in Sources */,
 				2FA2655520F111AF001EA78B /* UIView+Extension.swift in Sources */,
+				2FA2655920F13120001EA78B /* UIViewController+Extension.swift in Sources */,
 				2F2E705420F08A9200339E65 /* MobileListCellViewModel.swift in Sources */,
 				2F2E705B20F0D07D00339E65 /* MobileDetailViewModel.swift in Sources */,
 				2FA2655120F0FF33001EA78B /* URL+Extension.swift in Sources */,

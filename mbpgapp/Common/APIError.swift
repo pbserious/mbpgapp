@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias ErrorMessageHandler = (String) -> Void
+
 enum APIError: Error {
     case unparsableJSON
     case unknownError

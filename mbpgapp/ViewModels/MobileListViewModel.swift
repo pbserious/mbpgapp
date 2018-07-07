@@ -76,7 +76,7 @@ class MobileListViewModel {
     
     var loadingHandler: () -> Void = {}
     var dataChangedHandler: () -> Void = {}
-    var errorHandler: () -> Void = {}    
+    var errorHandler: ErrorMessageHandler = { _ in }    
     
     init(uc: MobileInfoUseCaseProtocol) {
         self.usecase = uc
@@ -91,7 +91,7 @@ class MobileListViewModel {
             self?.dataChangedHandler()
         }.catch { [weak self] error in
             // Handle error here
-            self?.errorHandler()
+            self?.errorHandler(error.localizedDescription)
         }
     }
     

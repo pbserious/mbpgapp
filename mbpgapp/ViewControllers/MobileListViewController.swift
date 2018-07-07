@@ -51,6 +51,9 @@ class MobileListViewController: UIViewController {
             // Reload section with hard code IndexSet
             self?.tableView.reloadSections([0], with: .automatic)
         }
+        vm.errorHandler = { [weak self] msg in
+            self?.showAlert(title: "Error", message: msg)
+        }
     }
     
     override func viewDidLoad() {
