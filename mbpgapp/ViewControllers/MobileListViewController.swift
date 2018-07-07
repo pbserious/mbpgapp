@@ -43,19 +43,19 @@ class MobileListViewController: UIViewController {
     
     func setViewModel(_ vm:MobileListViewModel) {
         self.vm = vm
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setupTableView()
-        setupSegmentedControl()
-        
         vm.dataChangedHandler = { [weak self] in
             // Reload section with hard code IndexSet
             self?.tableView.reloadSections([0], with: .automatic)
         }
         vm.loadData()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.title = " "
+        setupTableView()
+        setupSegmentedControl()
     }
     
     func setupTableView() {
@@ -73,7 +73,7 @@ class MobileListViewController: UIViewController {
     
     @objc func segmentedControlDidChange() {
         guard let segment = currentSegment else { return }
-        vm.seletFiltering(segment.filtering)
+        vm.selectFiltering(segment.filtering)
     }
 }
 
@@ -104,8 +104,8 @@ extension MobileListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? MobileListCell {
-            let data = vm.mobileData(for: indexPath)
-            cell.setData(data)
+            let data = vm.mobileListCellViewModel(for: indexPath)
+            cell.setViewModel(data)
         }
     }
     
@@ -122,5 +122,17 @@ extension MobileListViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         return [delete]
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let md = vm.mobileListCellViewModel(for: indexPath).mobileData else { return }
+        let destVM = MobileDetailViewModel(uc: MobileInfoUseCase.shared, md: md)
+        let destVC = MobileDetailViewController.newInstance
+        destVC.setViewModel(destVM)
+        
+        self.navigationController?.pushViewController(destVC, animated: true)
+        
     }
 }
