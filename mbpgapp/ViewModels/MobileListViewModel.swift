@@ -80,7 +80,7 @@ class MobileListViewModel {
         return adaptedList.count
     }
     
-    func mobileData(for indexPath:IndexPath) -> MobileData {
-        return adaptedList[indexPath.row]
+    func mobileData(for indexPath:IndexPath) -> MobileListCellViewModelProtocol {
+        return MobileListCellViewModel(md: adaptedList[indexPath.row])
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2F2E705220F070D300339E65 /* FavouriteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705120F070D300339E65 /* FavouriteHelper.swift */; };
+		2F2E705420F08A9200339E65 /* MobileListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E705320F08A9200339E65 /* MobileListCellViewModel.swift */; };
 		2F4CFE1D20EE69080036B3CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4CFE1C20EE69080036B3CA /* AppDelegate.swift */; };
 		2F4CFE1F20EE69080036B3CA /* MobileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4CFE1E20EE69080036B3CA /* MobileListViewController.swift */; };
 		2F4CFE2220EE69080036B3CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CFE2020EE69080036B3CA /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		20E428CD26793A7B8AB0F31D /* Pods-mbpgapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbpgapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-mbpgapp/Pods-mbpgapp.release.xcconfig"; sourceTree = "<group>"; };
 		2886D0CBE625520DEAACCD15 /* Pods-mbpgapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mbpgapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mbpgapp/Pods-mbpgapp.debug.xcconfig"; sourceTree = "<group>"; };
 		2F2E705120F070D300339E65 /* FavouriteHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteHelper.swift; sourceTree = "<group>"; };
+		2F2E705320F08A9200339E65 /* MobileListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListCellViewModel.swift; sourceTree = "<group>"; };
 		2F4CFE1920EE69080036B3CA /* mbpgapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mbpgapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F4CFE1C20EE69080036B3CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F4CFE1E20EE69080036B3CA /* MobileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileListViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				2F6AB4E120EE876F00A29FA1 /* MobileListViewModel.swift */,
+				2F2E705320F08A9200339E65 /* MobileListCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				2F6AB4DC20EE74DC00A29FA1 /* MobileData.swift in Sources */,
 				2F5FE61920EFCFF600199ACE /* MobileListCell.swift in Sources */,
 				2F6AB4E220EE876F00A29FA1 /* MobileListViewModel.swift in Sources */,
+				2F2E705420F08A9200339E65 /* MobileListCellViewModel.swift in Sources */,
 				2F5FE61D20F000BA00199ACE /* CustomSegmentedControl.swift in Sources */,
 				2F4CFE1F20EE69080036B3CA /* MobileListViewController.swift in Sources */,
 				2F2E705220F070D300339E65 /* FavouriteHelper.swift in Sources */,
