@@ -77,6 +77,7 @@ class MobileListViewController: UIViewController {
     
     @objc func segmentedControlDidChange() {
         guard let segment = currentSegment else { return }
+        self.tableView.setEditing(false, animated: false)
         vm.selectFiltering(segment.filtering)
     }
 }
