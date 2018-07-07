@@ -23,9 +23,9 @@ import UIKit
         }
     }
     
-    var items:[String] = ["All", "Favourite"] {
+    var items:[String] = ["item1", "item2"] {
         didSet {
-            setupLabels()
+            setupView()
         }
     }
     

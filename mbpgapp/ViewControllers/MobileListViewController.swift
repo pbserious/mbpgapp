@@ -22,8 +22,8 @@ class MobileListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpTableView()
-        segmentedControl.addTarget(self, action: #selector(segmentedControlDidChange), for: .valueChanged)
+        setupTableView()
+        setupSegmentedControl()
         
         vm.dataChangedHandler = { [weak self] in
             self?.tableView.reloadData()
@@ -31,12 +31,17 @@ class MobileListViewController: UIViewController {
         vm.loadData()
     }
     
-    func setUpTableView() {
+    func setupTableView() {
         tableView.register(UINib(nibName: MobileListCell.nibName, bundle: nil),
                            forCellReuseIdentifier: MobileListCell.reuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.tableFooterView = UIView(frame: CGRect.zero)
+    }
+    
+    func setupSegmentedControl() {
+        segmentedControl.items = ["All", "Favourite"]
+        segmentedControl.addTarget(self, action: #selector(segmentedControlDidChange), for: .valueChanged)
     }
     
     @objc func segmentedControlDidChange() {
