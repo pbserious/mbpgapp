@@ -10,14 +10,15 @@ import UIKit
 
 extension UIView {
     static let LOADING_VIEW_TAG = 99
+    static let EMPTY_VIEW_TAG = 66
     
-    func getLoadingView() -> UIView? {
-        return self.subviews.first(where: { $0.tag == UIView.LOADING_VIEW_TAG })
+    func getView(with tag:Int) -> UIView? {
+        return self.subviews.first(where: { $0.tag == tag })
     }
     
     func showLoadingView() {
         guard let loadingView = Bundle.main.loadNibNamed("LoadingView", owner: nil, options: nil)![0] as? UIView,
-            getLoadingView() == nil else {
+            getView(with: UIView.LOADING_VIEW_TAG) == nil else {
             return
         }
         loadingView.frame = self.bounds
@@ -26,14 +27,33 @@ extension UIView {
     }
     
     func hideLoadingView() {
-        guard let loadingView = getLoadingView() else {
+        hideView(with: UIView.LOADING_VIEW_TAG)
+    }
+    
+    func showEmptyView() {
+        guard getView(with: UIView.EMPTY_VIEW_TAG) == nil else {
+            return
+        }
+        let label = UILabel(frame: self.bounds)
+        label.textAlignment = .center
+        label.text = "There is no content."
+        label.tag = UIView.EMPTY_VIEW_TAG
+        self.addSubview(label)
+    }
+    
+    func hideEmptyView() {
+        hideView(with: UIView.EMPTY_VIEW_TAG)
+    }
+    
+    private func hideView(with tag:Int) {
+        guard let view = getView(with: tag) else {
             return
         }
         UIView.animate(withDuration: 0.3, animations: {
-            loadingView.alpha = 0.0
+            view.alpha = 0.0
         }) { _ in
-            loadingView.isHidden = true
-            loadingView.removeFromSuperview()
+            view.isHidden = true
+            view.removeFromSuperview()
         }
     }
 }

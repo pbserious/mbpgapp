@@ -29,6 +29,9 @@ class MobileDetailViewController: UIViewController {
         }
         vm.dataChangedHandler = { [weak self] in
             self?.scrollableImagesView.hideLoadingView()
+            if vm.getImageUrlList().isEmpty {
+                self?.scrollableImagesView.showEmptyView()
+            }
             self?.setupImages()
         }
         vm.errorHandler = { [weak self] msg in

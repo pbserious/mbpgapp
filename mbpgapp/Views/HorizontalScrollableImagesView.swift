@@ -61,7 +61,7 @@ extension HorizontalScrollableImagesView: UICollectionViewDelegate, UICollection
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if let cell = cell as? MobileImageCollectionCell {
             let url = imageUrlList[indexPath.row]
-            cell.imageView.kf.setImage(with: url)
+            cell.imageView.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "ph_default"))
         }
     }
 }

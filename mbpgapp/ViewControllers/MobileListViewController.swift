@@ -47,11 +47,19 @@ class MobileListViewController: UIViewController {
             self?.view.showLoadingView()
         }
         vm.dataChangedHandler = { [weak self] in
-            self?.view.hideLoadingView()
+            guard let weakSelf = self else { return }
+            weakSelf.view.hideLoadingView()
+            
+            if weakSelf.vm.numberOfMobileData() > 0 {
+                weakSelf.tableView.hideEmptyView()
+            } else {
+                weakSelf.tableView.showEmptyView()
+            }
             // Reload section with hard code IndexSet
-            self?.tableView.reloadSections([0], with: .automatic)
+            weakSelf.tableView.reloadSections([0], with: .automatic)
         }
         vm.errorHandler = { [weak self] msg in
+            self?.view.hideLoadingView()
             self?.showAlert(title: "Error", message: msg)
         }
     }
@@ -126,6 +134,9 @@ extension MobileListViewController: UITableViewDelegate, UITableViewDataSource {
             if let cell = tableView.cellForRow(at: indexPath) as? MobileListCell {
                 cell.favouritePressed()
                 tableView.deleteRows(at: [indexPath], with: .fade)
+                if tableView.numberOfRows(inSection: 0) == 0 {
+                    tableView.showEmptyView()
+                }
             }
         }
         

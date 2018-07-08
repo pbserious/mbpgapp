@@ -35,7 +35,7 @@ class MobileListCell: UITableViewCell {
         descriptionLabel.text = vm.description
         priceLabel.text = vm.price
         ratingLabel.text = vm.rating
-        thumbImageView.kf.setImage(with: vm.thumbnailUrl, placeholder: nil)
+        thumbImageView.kf.setImage(with: vm.thumbnailUrl, placeholder: #imageLiteral(resourceName: "ph_default"))
         updateFavouriteButton()
     }
     
