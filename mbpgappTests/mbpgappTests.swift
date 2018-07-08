@@ -120,5 +120,39 @@ class mbpgappTests: XCTestCase {
                   "highest price in fav is 179.93")
     }
     
-    // Need to test toggle fav through cellViewModel
+    func test_LIST_TOGGLE_FAVOURITE() {
+        let expectation = XCTestExpectation(description: "vm load data")
+        let vm = MobileListViewModel(uc: infoUseCase, fp: favHelper)
+        vm.dataChangedHandler = {
+            expectation.fulfill()
+        }
+        vm.loadData()
+        wait(for: [expectation], timeout: 0.1)
+        let fistIndexPath = IndexPath(row: 0, section: 0)
+        let lastIndexPath = IndexPath(row: idSet.count-1, section: 0)
+        
+        // Mock situation here mobile 3 is already favourite
+        let cellVM = vm.mobileListCellViewModel(for: fistIndexPath)
+        cellVM.toggleFavourite()
+        
+        vm.selectFiltering(.favourite)
+        XCTAssert(vm.numberOfMobileData()==1, "Only one fav left")
+        
+        vm.selectFiltering(.none)
+        let lastCellVM = vm.mobileListCellViewModel(for: lastIndexPath)
+        cellVM.toggleFavourite()
+        lastCellVM.toggleFavourite()
+        
+        vm.selectFiltering(.favourite)
+        let favlist = favHelper.favList // This should contain id 1,3,4
+        var checkedCount = 0
+        for index in 0...vm.numberOfMobileData()-1 {
+            let indexPath = IndexPath(row: index, section: 0)
+            let cvm = vm.mobileListCellViewModel(for: indexPath)
+            if favlist.contains(cvm.mobileData.id) {
+                checkedCount += 1
+            }
+        }
+        XCTAssert(checkedCount==3, "vm should show data with id \(favlist)")
+    }
 }
