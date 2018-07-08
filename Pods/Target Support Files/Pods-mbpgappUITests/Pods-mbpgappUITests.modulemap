@@ -1,0 +1,6 @@
+framework module Pods_mbpgappUITests {
+  umbrella header "Pods-mbpgappUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
