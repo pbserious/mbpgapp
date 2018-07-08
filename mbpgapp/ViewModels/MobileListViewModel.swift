@@ -53,7 +53,7 @@ class MobileListViewModel {
         // Filtering Data
         switch currentFiltering {
         case .favourite:
-            let favIdList = favHelper.getFavouriteList()
+            let favIdList = favHelper.favouriteArray
             result = mobileList.filter({ return favIdList.contains($0.id) })
         default:
             break

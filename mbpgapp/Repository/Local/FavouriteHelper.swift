@@ -11,23 +11,14 @@ import Foundation
 fileprivate let FAV_ARRAY_KEY = "FAV_ARRAY_KEY"
 
 protocol FavouriteHelperProtocol {
+    var favouriteArray: [Int] { get }
+    func updateFavouriteArray(_ arr:[Int])
     func favouriteMobile(for id:Int)
     func unfavouriteMobile(for id:Int)
-    func getFavouriteList() -> [Int]
     func isFavourite(for id:Int) -> Bool
 }
 
-class FavouriteHelper: FavouriteHelperProtocol {
-    
-    static let shared = FavouriteHelper()
-    
-    private var favouriteArray: [Int] {
-        return UserDefaults.standard.array(forKey: FAV_ARRAY_KEY) as? [Int] ?? []
-    }
-    
-    private func updateFavouriteArray(_ arr:[Int]) {
-        UserDefaults.standard.set(arr, forKey: FAV_ARRAY_KEY)
-    }
+extension FavouriteHelperProtocol {
     
     // MARK: - Interface
     // Favourite new mobile id
@@ -55,45 +46,37 @@ class FavouriteHelper: FavouriteHelperProtocol {
         }
     }
     
-    // Get all favourite list
-    func getFavouriteList() -> [Int] {
-        return favouriteArray
-    }
-    
     // check wheter specific id is favourite
-    func isFavourite(for id:Int) -> Bool {
+    func isFavourite(for id: Int) -> Bool {
         return favouriteArray.contains(id)
     }
 }
 
+class FavouriteHelper: FavouriteHelperProtocol {
+    
+    static let shared = FavouriteHelper()
+    
+    var favouriteArray: [Int] {
+        return UserDefaults.standard.array(forKey: FAV_ARRAY_KEY) as? [Int] ?? []
+    }
+    
+    func updateFavouriteArray(_ arr:[Int]) {
+        UserDefaults.standard.set(arr, forKey: FAV_ARRAY_KEY)
+    }
+    
+}
+
 class MockFavHelper: FavouriteHelperProtocol {
     // Thin mock class use for unit test
+    
+    // this property use for mock
     var favList = [Int]()
     
-    func favouriteMobile(for id: Int) {
-        favList.append(id)
-    }
-    
-    func unfavouriteMobile(for id: Int) {
-        var removedIndex: Int?
-        for index in 0...favList.count-1 {
-            if id == favList[index] {
-                removedIndex = index
-                break
-            }
-        }
-        if let removedIndex = removedIndex {
-            favList.remove(at: removedIndex)
-        }
-    }
-    
-    func getFavouriteList() -> [Int] {
+    var favouriteArray: [Int] {
         return favList
     }
     
-    func isFavourite(for id: Int) -> Bool {
-        return favList.contains(id)
+    func updateFavouriteArray(_ arr:[Int]) {
+        favList = arr
     }
-    
-    
 }

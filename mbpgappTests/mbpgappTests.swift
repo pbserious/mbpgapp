@@ -136,7 +136,7 @@ class mbpgappTests: XCTestCase {
         cellVM.toggleFavourite()
         
         vm.selectFiltering(.favourite)
-        XCTAssert(vm.numberOfMobileData()==1, "Only one fav left")
+        XCTAssert(vm.numberOfMobileData()==1, "Only one fav left but got \(vm.numberOfMobileData())")
         
         vm.selectFiltering(.none)
         let lastCellVM = vm.mobileListCellViewModel(for: lastIndexPath)
